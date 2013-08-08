@@ -1,0 +1,52 @@
+{
+  "name": "oauth2-token",
+  "version": "1.0.0",
+  "description": "Parse OAuth 2.0 tokens.",
+  "keywords": [
+    "passport",
+    "strategy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaredhanson/node-oauth2-token.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/node-oauth2-token/issues"
+  },
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+    "moment": "2.x.x",
+    "utils-merge": "1.x.x"
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "chai": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js test/**/*.test.js"
+  },
+  "testling": {
+    "browsers": [
+      "chrome/latest"
+    ],
+    "harness" : "mocha",
+    "files": [
+      "test/bootstrap/testling.js",
+      "test/*.test.js"
+    ]
+  }
+}
