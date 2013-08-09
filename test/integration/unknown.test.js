@@ -15,6 +15,12 @@ describe('parsing of uknown tokens', function() {
         token.parse(json)
       }).to.throw(Error, 'Unable to parse OAuth 2.0 token type: unknown');
     });
+    
+    it('should throw an error with default type declared', function() {
+      expect(function() {
+        token.parse(json, 'bearer')
+      }).to.throw(Error, 'Unable to parse OAuth 2.0 token type: unknown');
+    });
   });
 
 });
